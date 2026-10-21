@@ -1,0 +1,143 @@
+:root{
+    --overcast: #f1f1f2;
+    --warmGrey: #bcbabe;
+    --ice: #a1d6e2;
+    --glacierBlue: #1995ad;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topbar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 32px;
+    background-color: var(--overcast);
+}
+
+.link .logout{
+    background-color: red;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+.link a{
+    background-color: var(--glacierBlue);
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+.link .logout:hover{
+    background-color: rgb(236, 66, 66);
+}
+
+.link a:hover{
+    background-color: var(--ice);
+}
+
+.container{
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--overcast);
+    align-items: center;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 48px;
+}
+
+.container > *{
+    width: 100%;
+    max-width: 640px;
+}
+
+label{
+    display: block;
+    font-size: .8rem;
+    margin-bottom: 4px;
+}
+
+input[type = "text"], input[type = "email"], textarea{
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 16px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color .2s;
+}
+
+input:focus, textarea:focus{
+    border-color: var(--glacierBlue);
+}
+
+textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+}
+
+.area.full, .tombol.full{
+    grid-column: 1/-1;
+}
+
+.tombol{
+    display: flex;
+    gap: 6px;
+}
+
+input[type = "submit"], input[type = "reset"]{
+    height: 36px;
+    padding: 8px 16px;
+    margin-right: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type = "submit"]{
+    width: 120px;
+    background-color: var(--glacierBlue);
+    color: black;
+}
+
+input[type = "reset"]{
+    border: 2px solid var(--glacierBlue);
+    background-color: var(--overcast);
+    color: black;
+}
+
+input[type = "submit"]:hover{
+    background-color: var(--ice);
+}
+
+input[type = "reset"]:hover{
+    background-color: var(--glacierBlue);
+}

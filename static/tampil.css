@@ -1,0 +1,283 @@
+:root{
+    --overcast: #f1f1f2;
+    --warmGrey: #bcbabe;
+    --ice: #a1d6e2;
+    --glacierBlue: #1995ad;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--overcast);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.main{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 32px;
+    background-color: var(--overcast);
+}
+
+.link .logout{
+    background-color: red;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+.link a{
+    background-color: var(--glacierBlue);
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+.link .logout:hover{
+    background-color: rgb(236, 66, 66);
+}
+
+.link a:hover{
+    background-color: var(--ice);
+}
+
+.cari{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 0 20px auto;
+}
+
+.cari input{
+    flex: 1;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: .8;
+    outline: none;
+}
+
+.cari button{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1995ad;
+    color: black;
+    cursor: pointer;
+}
+
+.isi{
+    padding: 32px;
+}
+
+.isi h1{
+    margin: 0 0 4px;
+    font-size: 2rem;
+}
+
+.sub{
+    margin: 0 0 20px;
+    font-size: .8rem;
+    color: black;
+}
+
+.panel{
+    background-color: var(--overcast);
+    border: 1px solid var(--warmGrey);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+.panel h2{
+    margin: 0 0 4px;
+    font-size: 1.15rem;
+}
+
+.alert{
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 0 0 16px;
+}
+
+.alert ul{
+    margin: 0;
+    padding-left: 18px;
+}
+
+.alert.hijau{
+    background-color: var(--glacierBlue);
+    color: var(--ice);
+}
+
+.alert.merah{
+    background-color: rgb(247, 86, 86);
+    color: rgb(184, 0, 0);
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.area.full, .tombol.full{
+    grid-column: 1 / -1;
+}
+
+label{
+    display: block;
+    font-size: .8rem;
+    margin-bottom: 4px;
+}
+
+input[type = "text"], input[type = "email"], textarea{
+    width: 100%;
+    padding: 8px;
+    margin: 0 0 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color .2s;
+}
+
+input:focus, textarea:focus{
+    border-color: var(--ice);
+}
+
+textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+
+.tombol{
+    display: flex;
+    gap: 8px
+}
+
+.btn{
+    display: inline-block;
+    padding: 9px 22px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: .8rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn.utama{
+    background-color: var(--glacierBlue);
+    color: black;
+}
+
+.btn.utama:hover{
+    background-color: var(--ice);
+}
+
+.btn.garis:hover{
+    background-color: var(--warmGrey);
+}
+
+.aksi{
+    display: flex;
+    gap: 8px;
+}
+
+.btn.kecil{
+    padding: 5px 12px;
+    font-size: .8rem;
+    background-color: #1995ad;
+    color: black;
+}
+
+.btn.kecil:hover{
+    background-color: var(--ice);
+}
+
+.btn.kecil.batal{
+    border: 2px solid var(--glacierBlue);
+    background-color: var(--overcast);
+    color: black;
+}
+
+.btn.kecil.batal:hover{
+    background-color: var(--glacierBlue);
+}
+
+.btn.kecil.bahaya{
+    background-color: red;
+    color: black;
+}
+
+.btn.kecil.bahaya:hover{
+    background-color: rgb(236, 66, 66);
+}
+
+.tabel-wrap{
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .8rem;
+}
+
+thead th{
+    text-align: left;
+    padding: 10px 12px;
+    background-color: var(--overcast);
+    border-bottom: 2px solid var(--warmGrey);
+    white-space: nowcrap;
+}
+
+tbody td{
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--warmGrey);
+    vertical-align: top;
+}
+
+tbody tr:hover{
+    background-color: var(--warmGrey);
+}
+
+tr.sedang{
+    background-color: var(--warmGrey);
+}
+
+td.pesan{
+    min-width: 200px;
+    max-width: 320px;
+    word-wrap: break-word;
+}
+
+td.kosong{
+    display: inline;
+    margin: 0;
+}
+
+td.kosong{
+    text-align: center;
+    padding: 28px;
+    color: var(--warmGrey);
+}
